@@ -41,6 +41,7 @@ body {
   box-shadow: 1px 1px 7px 7px #f5f5f5;
   padding: 30px 0;
   max-width: 900px;
+  position: relative;
 }
 
 .resume__block {
@@ -268,3 +269,42 @@ body {
   color: var(--secondary-text-color);
 }
 /* End of Experience and Additional Info Styles */
+
+/* ================================================= */
+
+/* Styles of My Resume */
+
+/* Common Styles */
+:root {
+  --black-color: black;
+  --white-color: white;
+  --grey-color: grey;
+  --dark-grey-color: rgb(82, 79, 79);
+  --orange-color: rgb(244, 166, 21);
+}
+/* End of Common Styles */
+
+.read-further-link {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.read-further-link i {
+  border: 1px solid var(--grey-color);
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 15px;
+  color: var(--dark-grey-color);
+  transition: all 0.5s;
+}
+
+.read-further-link:hover i {
+  scale: 1.2;
+  color: var(--orange-color);
+  border: 1.2px solid var(--orange-color);
+  border-radius: 50%;
+}
+
+/* End of Styles of My Resume */
