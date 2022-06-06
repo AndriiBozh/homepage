@@ -278,12 +278,24 @@ body {
 :root {
   --black-color: black;
   --white-color: white;
+  --white-color-high-opacity: rgba(255, 255, 255, 0.2);
+  --white-moderate-opacity: rgba(255, 255, 255, 0.5);
   --grey-color: grey;
   --dark-grey-color: rgb(82, 79, 79);
+  --light-grey-color: rgb(211, 199, 199);
   --orange-color: rgb(244, 166, 21);
+}
+
+* {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 /* End of Common Styles */
 
+/* Arrow-Link to My Resume */
 .read-further-link {
   position: absolute;
   bottom: 10px;
@@ -306,5 +318,80 @@ body {
   border: 1.2px solid var(--orange-color);
   border-radius: 50%;
 }
+/* End of Arrow Link to My Resume */
+
+/* My Resume Section 1 */
+/* Navbar */
+
+.my-resume-section-1 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      var(--white-color-high-opacity),
+      var(--white-moderate-opacity)
+    ),
+    url("assets/bg-image.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--white-color-high-opacity);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-link {
+  color: var(--dark-grey-color);
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+
+.navbar-link:hover {
+  color: var(--grey-color);
+  scale: 1.2;
+}
+/* End of Navbar */
+
+.my-resume-section-1-heading {
+  color: var(--dark-grey-color);
+  background-color: var(--light-grey-color);
+  color: var(--white-color);
+  text-shadow: 2px 2px 5px var(--dark-grey-color);
+  padding: 0 30px;
+  margin-bottom: 50px;
+  transform: skewX(-10deg);
+}
+
+.person-img {
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(4px);
+  transition: filter 1s;
+  margin-bottom: 50px;
+}
+
+.person-img:hover {
+  filter: blur(0);
+}
+
+.person-name {
+  color: var(--white-color);
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px var(--black-color);
+  font-size: 25px;
+}
+
+/* End of My Resume Section 1 */
 
 /* End of Styles of My Resume */
